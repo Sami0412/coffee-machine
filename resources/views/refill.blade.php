@@ -38,10 +38,37 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
 
-                <h1>Coffee Machine</h1>
+                <h1>Refill Coffee Machine</h1>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    Form
+                <div class="card">
+
+                <button onClick="window.location='/order'">Order a coffee</button>
+                <p>Current stock:</p>
+                
+                    <form method="put" action="">
+                    @csrf
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="coffee">Add coffee (grams):</label>
+                                    <input class="form-control" type="number" name="coffee" id="coffee" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for="milk">Add Milk (ml):</label>
+                                    <input class="form-control" type="number" name="milk" id="milk">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sugar">Add Sugar (g):</label>
+                                    <input class="form-control" type="number" name="sugar" id="sugar">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Add to machine</button>
+
+                    </form>
                 </div>
 
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
